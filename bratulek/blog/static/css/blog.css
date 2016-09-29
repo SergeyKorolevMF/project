@@ -1,0 +1,288 @@
+@font-face {
+    font-family: Dobro;
+    src: url(Dobroznachniy-Regular.tff);
+}
+
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+
+body {
+background-image: ul(pic/white-background-image-9.png);
+background-size: 100%;  
+background-repeat: no-repeat;
+background-attachment: fixed  
+}
+
+A {
+    color: black;
+   }
+   A:visited {
+    color: #708090;
+   }
+   A:active {
+    color: #20B2AA;
+   }
+
+.page-header {
+display: inline-block;
+margin-top: 0;
+padding: 0px 0px 10px 20px;
+font-family: Dobro;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+color: black;
+font-size: 36pt;
+}
+
+.content {
+margin-left: 40px;
+}
+
+.date {
+font-style: italic;
+text-align: right;
+}
+
+.title {
+margin-top: 15px;
+position: relative;
+color: #828282;
+
+}
+
+.save {
+float: left;
+}
+
+.post-form textarea, .post-form input {
+width: 100%;
+}
+
+.post {
+margin-bottom: 40px;
+width: auto;
+text-indent: 1.5em;
+text-align: 10px;
+font-family: Helvetica;  
+border: solid 3px black;
+}
+
+.post h3 a, .post h3 a:visited {
+position: relative;
+margin-top: 40px;
+color: #000000;
+font-weight: 400; 
+border-bottom: 5px;
+}
+
+.comment {
+margin-bottom: 40px;
+width: 78%;
+text-indent: 1.5em;
+margin-left: 20px;
+border: solid 3px black;
+}
+
+.new_post {
+  height: 50px;
+  width: 50px;
+  background-color: blue;
+}
+
+.new_comment {
+  height: 50px;
+  width: 50px;
+  background-color: red;
+}
+
+/* top-menu */
+.container {
+  margin-top: 20px;
+  overflow: hidden;
+  width: 1000px;
+}
+
+.box {
+white-space: nowrap;
+}
+
+.box div {
+width: 90px;
+display: inline-block;
+text-align: center;
+}
+
+/* Global Button Styles */
+a.animated-button:link, a.animated-button:visited {
+  width: 200px;
+  position: relative;
+  display: inline;
+  margin: 30px auto 0;
+  padding: 14px 15px;
+  color: #fff;
+  font-size:14px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  letter-spacing: .08em;
+  border-radius: 0;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+a.animated-button:link:after, a.animated-button:visited:after {
+  content: "";
+  position: absolute;
+  height: 0%;
+  left: 50%;
+  top: 50%;
+  width: 150%;
+  z-index: -1;
+  -webkit-transition: all 0.75s ease 0s;
+  -moz-transition: all 0.75s ease 0s;
+  -o-transition: all 0.75s ease 0s;
+  transition: all 0.75s ease 0s;
+}
+a.animated-button:link:hover, a.animated-button:visited:hover {
+  color: #FFF;
+  text-shadow: none;
+}
+a.animated-button:link:hover:after, a.animated-button:visited:hover:after {
+  height: 450%;
+}
+a.animated-button:link, a.animated-button:visited {
+  position: relative;
+  display: inline;
+  margin: 30px auto 0;
+  padding: 14px 15px;
+  color: #fff;
+  font-size:14px;
+  border-radius: 0;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  letter-spacing: .08em;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+a.animated-button.thar-two {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  border: 2px solid #F7CA18;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+a.animated-button.thar-two:hover {
+  color: #000;
+  background-color: transparent;
+  text-shadow: ntwo;
+}
+a.animated-button.thar-two:hover:before {
+  top: 0%;
+  bottom: auto;
+  height: 100%;
+}
+a.animated-button.thar-two:before {
+  display: block;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  height: 0px;
+  width: 100%;
+  z-index: -1;
+  content: '';
+  color: #000 ;
+  background: #F7CA18;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+ul.boards {
+    margin: 0; /* Обнуляем значение отступов */
+    padding: 4px; /* Значение полей */
+}
+ul.boards li {
+display: inline; /* Отображать как строчный элемент */
+margin-right: 5px; /* Отступ слева */
+border: 1px solid #000; /* Рамка вокруг текста */
+padding: 3px; /* Поля вокруг текста */
+}
+
+.menu {
+  font-family: Dobro;
+  margin: 20px;
+  height: 40px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 120px;
+  font-size: 15px;
+  border: black  solid 1px;
+  background-color: white;
+}
+.menu:before {
+  content: "New post";
+  position: absolute;
+  padding: 6px;
+  text-align: center;
+  border: black solid 2px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition-duration: 0.5s;
+}
+.menu:hover:before, .menu:focus:before, .menu:active:before {
+  border: black  solid 5px;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  left: -10px;
+}
+
+/* Thar Buttons */
+
+a.animated-button.thar-one {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  border: 2px solid #F7CA18;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+a.animated-button.thar-one:hover {
+  color: #000 !important;
+  background-color: transparent;
+  text-shadow: none;
+}
+a.animated-button.thar-one:hover:before {
+  bottom: 0%;
+  top: auto;
+  height: 100%;
+}
+a.animated-button.thar-one:before {
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 0px;
+  width: 100%;
+  z-index: -1;
+  content: '';
+  color: #000 !important;
+  background: #F7CA18;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+

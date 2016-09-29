@@ -1,0 +1,11 @@
+{% extends 'blog/base.html' %}
+{% load staticfiles %}
+
+    {% block content %}
+        {% for board in boards %}
+            <div>
+                <h1> <a href="{% url 'board_detail' pk=board.pk %}">{{ board.name }}</a></td></h1>
+            </div> 
+        {% endfor %}
+        	
+    {% endblock content %}
