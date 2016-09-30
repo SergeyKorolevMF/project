@@ -42,7 +42,7 @@ def board_detail(request, pk):
 def post_new(request, bd):
         board_get=Board.objects.get(pk=bd)
         if request.method == "POST":
-            form = PostForm(request.POST, request.FILES)
+            form = PostForm(request.POST  or None, request.FILES or None)
             if form.is_valid():
                 post = form.save(commit=False)
                 post.board = board_get
