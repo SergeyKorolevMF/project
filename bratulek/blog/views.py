@@ -25,10 +25,16 @@ from django.contrib.syndication.views import Feed
 
 def board_list(request):
     boards = Board.objects.all()
+    if not boards:
+        Board.objects.create(name="Free Board")
+        boards = Board.objects.all()
     return render(request, 'blog/board_list.html', {'boards': boards})
 
 def board_detail(request, pk):
     boards = Board.objects.all()
+    if not boards:
+        Board.objects.create(name="Free Board")
+        boards = Board.objects.all()
     posts = Post.objects.filter(board=pk).order_by('-published_date')
     board = Board.objects.get(pk=pk)
     return render(request, 'blog/post_list.html', {'posts': posts, 'board':board, 'boards': boards})
