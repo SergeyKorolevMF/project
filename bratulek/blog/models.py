@@ -23,7 +23,7 @@ class Post(models.Model):
     title = models.CharField(max_length=200)
     text = RichTextField(blank=True, default='')
     board = models.ForeignKey(Board, default="")
-    image = models.ImageField(upload_to='', blank=False, null=False)
+    image = models.ImageField(upload_to='', blank=True, null=True)
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
 
@@ -48,5 +48,5 @@ class Comment(models.Model):
     def publish(self):
         self.published_date = timezone.now()
         self.save()
- 
+        
         
